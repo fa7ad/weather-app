@@ -1,0 +1,7 @@
+.current-weather {
+  flex-basis: 65%;
+}
+
+.current-weather--light {
+  background: url(./img/day.svg) no-repeat calc(50% + 40px) bottom / 150vw, url(./img/day.svg) no-repeat center bottom / 140vw, linear-gradient(to bottom, #ff6e5f 0%, #ffc383 80%, #ffffff 100%);
+}
