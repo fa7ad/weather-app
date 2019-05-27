@@ -1,28 +1,26 @@
 import { createReducer } from 'redux-starter-kit';
 import { setLocation } from '../actions/location';
 
-type Location = String | Number[];
-
 export interface LocationState {
-  list: Location[];
-  current: Location;
+  list: string[];
+  current: string;
 }
 
 const initialState: LocationState = {
   list: [
-    'Dhaka, BD',
-    'Chittagong, BD',
-    'Khulna, BD',
-    'Sylhet, BD',
-    'Rajshahi, BD',
-    'Mymensingh, BD',
-    'Barisal, BD',
-    'Rangpur, BD',
-    'Comilla, BD',
-    'Narayanganj, BD',
-    'Gazipur, BD'
+    'Dhaka,BD',
+    'Chittagong,BD',
+    'Khulna,BD',
+    'Sylhet,BD',
+    'Rajshahi,BD',
+    'Mymensingh,BD',
+    'Barisal,BD',
+    'Rangpur,BD',
+    'Comilla,BD',
+    'Narayanganj,BD',
+    'Gazipur,BD'
   ],
-  current: 'Dhaka, BD'
+  current: 'Dhaka,BD'
 };
 
 export const location = createReducer(initialState, {

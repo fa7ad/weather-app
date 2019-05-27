@@ -1,7 +1,69 @@
 .current-weather {
   flex-basis: 65%;
+  text-align: center;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .current-weather--light {
-  background: url(./img/day.svg) no-repeat calc(50% + 40px) bottom / 150vw, url(./img/day.svg) no-repeat center bottom / 140vw, linear-gradient(to bottom, #ff6e5f 0%, #ffc383 80%, #ffffff 100%);
+  background: url(./img/day.svg) repeat-x 25 bottom / 150vmin,
+    url(./img/day.svg) repeat-x center bottom / 140vmin,
+    linear-gradient(to bottom, #ff6e5f 0%, #ffc383 85%, #ffffff 100%);
+}
+
+.current-weather--dark {
+  background: url(./img/night.svg) repeat-x 25% bottom / auto 50%,
+    url(./img/night.svg) repeat-x center bottom / auto 50%,
+    linear-gradient(to bottom, #321359 0%, #574190 85%, #ffffff 100%);
+}
+
+@media (min-width: 768px) {
+  .current-weather {
+    flex-basis: 100%;
+  }
+}
+
+.current-weather__location {
+  font-size: 1.5rem;
+  margin: 1em auto;
+}
+
+.current-weather__location .location-select__control {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  flex-direction: row-reverse;
+  padding: 2px 25px;
+
+}
+
+.current-weather__location .location-select__single-value {
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  transform: none;
+}
+.current-weather__location .location-select__input {
+  color: #ffffff;
+}
+
+.location-select__option,
+.location-select__menu,
+.location-select__menu-list {
+  color: #333333;
+}
+
+
+.current-weather__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-select__value-container {
+  flex-shrink: 10;
 }

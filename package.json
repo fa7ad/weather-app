@@ -5,15 +5,18 @@
   "dependencies": {
     "@types/classnames": "^2.2.7",
     "@types/node": "12.0.2",
+    "@types/qs": "^6.5.3",
     "@types/react": "16.8.18",
     "@types/react-dom": "16.8.4",
     "@types/react-redux": "^7.0.9",
     "classnames": "^2.2.6",
+    "qs": "^6.7.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
     "react-redux": "^7.0.3",
     "react-scripts": "3.0.1",
+    "react-select": "^3.0.3",
     "redux": "^4.0.1",
     "redux-starter-kit": "^0.5.1",
     "redux-thunk": "^2.3.0",
@@ -22,6 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-select": "^2.0.19",
+    "react-snap": "^1.23.0"
   }
 }

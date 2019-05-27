@@ -1,19 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import { Provider } from 'react-redux';
-
-import './index.css';
-import App from './components/App';
-
-import store from './store';
+import { hydrate, render } from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+import './index.css';
+import store from './store';
+import App from './components/App';
+
+
+const root = document.getElementById('root');
+const renderer = root && root.hasChildNodes() ? hydrate : render;
+
+renderer(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  root
 );
 
 serviceWorker.unregister();

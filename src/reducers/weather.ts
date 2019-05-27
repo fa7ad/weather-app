@@ -10,22 +10,22 @@ export interface Weather {
   temp: {
     now: Number;
     min: Number;
-    mix: Number;
+    max: Number;
   };
   wind: {
     speed: Number;
     deg: Number;
   };
-  humidity: Number | String;
+  humidity: Number | string;
   icon: {
-    main: String;
-    description: String;
-    icon_name: String;
+    main: string;
+    description: string;
+    icon_name: string;
   };
 }
 
 export interface WeatherState {
-  today?: Weather;
+  today: Weather;
   tomorrow?: Weather;
   after?: Weather;
 }
@@ -35,7 +35,7 @@ const initialState: WeatherState = {
     temp: {
       now: 0,
       min: 0,
-      mix: 0
+      max: 0
     },
     wind: {
       speed: 0,
