@@ -3,7 +3,7 @@ import { setLocation } from '../actions/location';
 
 type Location = String | Number[];
 
-interface LocationState {
+export interface LocationState {
   list: Location[];
   current: Location;
 }

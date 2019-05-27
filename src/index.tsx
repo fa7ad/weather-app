@@ -11,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App language='React + TS' />
+    <App />
   </Provider>,
   document.getElementById('root')
 );

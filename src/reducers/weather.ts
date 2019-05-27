@@ -6,7 +6,7 @@ import {
   setAfter
 } from '../actions/weather';
 
-interface Weather {
+export interface Weather {
   temp: {
     now: Number;
     min: Number;
@@ -24,7 +24,7 @@ interface Weather {
   };
 }
 
-interface WeatherState {
+export interface WeatherState {
   today?: Weather;
   tomorrow?: Weather;
   after?: Weather;
