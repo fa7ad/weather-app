@@ -18,7 +18,7 @@ function toWeather(data: any): Weather {
     icon: {
       main: data.weather[0].main,
       description: data.weather[0].description,
-      icon_name: data.weather[0].icon
+      icon_name: data.weather[0].id+data.weather[0].icon.slice(-1)
     }
   };
 }

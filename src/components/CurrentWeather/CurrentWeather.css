@@ -68,5 +68,11 @@
 
 .current-weather__temperature {
   font-size: 5rem;
-  margin: 0.1em auto;
+  margin: 0 auto;
+  padding-left: 0.33em;
+}
+
+.current-weather__minmax {
+  font-size: 1rem;
+  text-align-last: center;
 }
