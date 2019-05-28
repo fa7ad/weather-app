@@ -1,5 +1,6 @@
 @import url('https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap');
+@import url('./owfont-regular.min.css');
 
 body {
   position: absolute;

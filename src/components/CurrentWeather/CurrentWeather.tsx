@@ -5,8 +5,8 @@ import cx from 'classnames';
 import { MdNearMe } from 'react-icons/md';
 
 import { StoreState } from '../../store';
-import { setLocationAndUpdate } from '../../actions/location';
 import { Weather } from '../../reducers/weather';
+import { setLocationAndUpdate } from '../../actions';
 
 import './CurrentWeather.css';
 
@@ -21,39 +21,55 @@ interface CurrentWeatherProps {
   setLocationAndUpdate: (payload: string) => Promise<void>;
 }
 
-const CurrentWeather: React.FC<CurrentWeatherProps> = ({
-  location,
-  locationList,
-  theme,
-  weather,
-  setLocationAndUpdate
-}) => {
-  const handleLocationChange = (event: { value: string }) => {
-    setLocationAndUpdate(event.value.replace(/(,BD)?$/, ',BD'));
+class CurrentWeather extends React.PureComponent<CurrentWeatherProps> {
+  timer: NodeJS.Timeout = setTimeout(() => {}, 0);
+
+  handleLocationChange = (event: { value: string }) => {
+    this.props.setLocationAndUpdate(event.value.replace(/(,BD)?$/, ',BD'));
   };
 
-  const listLocations = locationList.map(value => ({
+  listLocations = this.props.locationList.map(value => ({
     value,
     label: value.replace(',BD', '')
   }));
 
-  return (
-    <div className={cx('current-weather', `current-weather--${theme}`)}>
-      <Creatable
-        onChange={handleLocationChange}
-        options={listLocations}
-        value={{ value: location, label: location.replace(',BD', '') }}
-        components={{
-          DropdownIndicator: () => <MdNearMe />,
-          IndicatorSeparator: null
-        }}
-        className='current-weather__location'
-        classNamePrefix='location-select'
-      />
-      <h3>{weather && weather.temp.now}</h3>
-    </div>
-  );
-};
+  componentDidMount() {
+    this.props.setLocationAndUpdate(this.props.location);
+    this.timer = setInterval(
+      () => this.props.setLocationAndUpdate(this.props.location),
+      5e3
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  render() {
+    const { location, theme, weather } = this.props;
+
+    return (
+      <div className={cx('current-weather', `current-weather--${theme}`)}>
+        <Creatable
+          onChange={this.handleLocationChange}
+          options={this.listLocations}
+          value={{ value: location, label: location.replace(',BD', '') }}
+          components={{
+            DropdownIndicator: () => <MdNearMe />,
+            IndicatorSeparator: null
+          }}
+          className='current-weather__location'
+          classNamePrefix='location-select'
+        />
+        
+        <h1 className='current-weather__temperature'>
+          {weather.temp.now}
+          <sup>&deg;</sup>
+        </h1>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = (state: StoreState) => ({
   theme: state.ui.theme,

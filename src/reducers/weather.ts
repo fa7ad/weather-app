@@ -1,10 +1,5 @@
 import { createReducer } from 'redux-starter-kit';
-import {
-  setToday,
-  setWeather,
-  setTomorrow,
-  setAfter
-} from '../actions/weather';
+import { setWeather } from '../actions/weather';
 
 export interface Weather {
   temp: {
@@ -53,15 +48,6 @@ const initialState: WeatherState = {
 export const weather = createReducer(initialState, {
   [setWeather.type](state, action) {
     Object.assign(state, action.payload);
-  },
-  [setToday.type](state, action) {
-    Object.assign(state.today, action.payload);
-  },
-  [setTomorrow.type](state, action) {
-    Object.assign(state.tomorrow, action.payload);
-  },
-  [setAfter.type](state, action) {
-    Object.assign(state.after, action.payload);
   }
 });
 

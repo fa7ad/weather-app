@@ -6,7 +6,7 @@ export interface UIState {
 }
 
 const initialState: UIState = {
-  theme: 'dark'
+  theme: 'light'
 };
 
 export const ui = createReducer(initialState, {
