@@ -18,4 +18,4 @@ renderer(
   root
 );
 
-serviceWorker.unregister();
+serviceWorker.register();

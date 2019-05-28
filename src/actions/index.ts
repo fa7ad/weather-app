@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment, { Moment } from 'moment';
 import axios from 'axios';
 import { appid } from '../api';
 
@@ -8,6 +8,7 @@ import { Weather } from '../reducers/weather';
 
 function toWeather(data: any): Weather {
   return {
+    date: data.dt * 1000,
     temp: {
       now: Math.round(data.main.temp),
       min: Math.round(data.main.temp_min),
@@ -18,7 +19,11 @@ function toWeather(data: any): Weather {
     icon: {
       main: data.weather[0].main,
       description: data.weather[0].description,
-      icon_name: data.weather[0].id+data.weather[0].icon.slice(-1)
+      icon_name: (
+        data.weather[0].id +
+        '-' +
+        data.weather[0].icon.slice(-1)
+      ).replace(/(-[0-9])$/, '')
     }
   };
 }
@@ -41,32 +46,28 @@ async function fetchWeather(location: string) {
     { params }
   );
 
-  const _today = moment(new Date());
-  const _tomorrow = _today.add(1, 'day');
-  const _after = _tomorrow.add(1, 'day');
+  const revList = [].slice.call(data.list);
 
-  const todayRaw = data.list.find(
-    (el: any) =>
-      moment.unix(el.dt).isSame(_today, 'date') &&
-      moment.unix(el.dt).isSameOrAfter(_today, 'hour')
-  );
+  const _today = moment();
+  const _tomorrow = moment();
+  const _after = moment();
 
-  const tomorrowRaw = data.list.find(
-    (el: any) =>
-      moment.unix(el.dt).isSame(_tomorrow, 'date') &&
-      moment.unix(el.dt).isSameOrAfter(_tomorrow, 'hour')
-  );
+  _tomorrow.add(1, 'day');
+  _after.add(2, 'days');
 
-  const afterRaw = data.list.find(
-    (el: any) =>
-      moment.unix(el.dt).isSame(_after, 'date') &&
-      moment.unix(el.dt).isSameOrAfter(_after, 'hour')
-  );
+  const findDay = (day: Moment) => (el: any) => {
+    const dt = moment.unix(el.dt).utc();
+    return dt.isSame(day, 'day');
+  };
+
+  const todayRaw = revList.filter(findDay(_today)).slice(-1);
+  const tomorrowRaw = revList.filter(findDay(_tomorrow)).slice(-1);
+  const afterRaw = revList.filter(findDay(_after)).slice(-1);
 
   return {
-    today: toWeather(todayRaw),
-    tomorrow: toWeather(tomorrowRaw),
-    after: toWeather(afterRaw)
+    today: toWeather(todayRaw[0]),
+    tomorrow: toWeather(tomorrowRaw[0]),
+    after: toWeather(afterRaw[0])
   };
 }
 

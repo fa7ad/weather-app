@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import cx from 'classnames';
 
 import { MdNearMe, MdArrowUpward, MdArrowDownward } from 'react-icons/md';
+import { WiRaindrop } from 'react-icons/wi';
 
 import { StoreState } from '../../store';
 import { Weather } from '../../reducers/weather';
@@ -10,7 +11,8 @@ import { setLocationAndUpdate } from '../../actions';
 
 import './CurrentWeather.css';
 
-const Creatable = require('react-select/creatable/dist/react-select.cjs.prod').default;
+const Creatable = require('react-select/creatable/dist/react-select.cjs.prod')
+  .default;
 
 interface CurrentWeatherProps {
   theme: 'light' | 'dark';
@@ -34,7 +36,10 @@ class CurrentWeather extends React.PureComponent<CurrentWeatherProps> {
 
   componentDidMount() {
     this.props.setLocationAndUpdate(this.props.location);
-    this.timer = setInterval(() => this.props.setLocationAndUpdate(this.props.location), 5e3);
+    this.timer = setInterval(
+      () => this.props.setLocationAndUpdate(this.props.location),
+      5e3
+    );
   }
 
   componentWillUnmount() {
@@ -57,21 +62,25 @@ class CurrentWeather extends React.PureComponent<CurrentWeatherProps> {
           className='current-weather__location'
           classNamePrefix='location-select'
         />
-        <div className='current-weather__minmax'>
-          <MdArrowUpward />
-          {weather.temp.max}
-          <sup>&deg;</sup>&nbsp;
-          <MdArrowDownward />
-          {weather.temp.min}
-          <sup>&deg;</sup>
-        </div>
         <div className='current-weather__temperature'>
+          <div className='current-weather__minmax'>
+            <MdArrowUpward />
+            {weather.temp.max}
+            <sup>&deg;</sup>&nbsp;
+            <MdArrowDownward />
+            {weather.temp.min}
+            <sup>&deg;</sup>
+          </div>
           {weather.temp.now}
           <sup>&deg;</sup>
         </div>
-        <div className="current-weather__icon">
-          {weather.icon.main}<br/>
-          <i className={`owf owf-5x owf-${weather.icon.icon_name.replace(/([a-z])$/, '-$1')}`}></i>
+        <div className='current-weather__icon'>
+          {weather.icon.main}
+          <br />
+          <i className={`owf owf-5x owf-${weather.icon.icon_name}`} />
+        </div>
+        <div className='current-weather__humidity' title='Humidity'>
+          <WiRaindrop size='2em' /> {weather.humidity} %
         </div>
       </div>
     );

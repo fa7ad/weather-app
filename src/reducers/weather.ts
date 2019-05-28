@@ -2,16 +2,17 @@ import { createReducer } from 'redux-starter-kit';
 import { setWeather } from '../actions/weather';
 
 export interface Weather {
+  date: number;
   temp: {
-    now: Number;
-    min: Number;
-    max: Number;
+    now: number;
+    min: number;
+    max: number;
   };
   wind: {
-    speed: Number;
-    deg: Number;
+    speed: number;
+    deg: number;
   };
-  humidity: Number | string;
+  humidity: number | string;
   icon: {
     main: string;
     description: string;
@@ -27,6 +28,7 @@ export interface WeatherState {
 
 const initialState: WeatherState = {
   today: {
+    date: +new Date(),
     temp: {
       now: 0,
       min: 0,
