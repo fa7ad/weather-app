@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 415 163"
+   style="enable-background:new 0 0 415 163;"
+   xml:space="preserve"
+   sodipodi:docname="day.svg"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"><metadata
+   id="metadata30"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs28" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1912"
+   inkscape:window-height="1042"
+   id="namedview26"
+   showgrid="false"
+   inkscape:zoom="1.9696758"
+   inkscape:cx="189.2694"
+   inkscape:cy="8.4159569"
+   inkscape:window-x="4"
+   inkscape:window-y="34"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="page1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FFB2AE;}
+</style>
+<g
+   id="page1">
+	
+		
+	<g
+   id="g22"
+   transform="matrix(1.1001588,0,0,1,-1.9699524,0)">
+		<g
+   id="g20">
+			<g
+   id="shape_9_">
+				<g
+   id="g17">
+					
+						<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="207.3645"
+   y1="-0.025390631"
+   x2="207.3645"
+   y2="130.1675"
+   gradientTransform="matrix(1,0,0,-1,0,164)">
+						<stop
+   offset="0"
+   style="stop-color:#FFFFFF;stop-opacity:0"
+   id="stop6" />
+						<stop
+   offset="0.3269"
+   style="stop-color:#FFC383;stop-opacity:0.9"
+   id="stop8" />
+						<stop
+   offset="1"
+   style="stop-color:#FF8073"
+   id="stop10" />
+					</linearGradient>
+					<polygon
+   class="st0"
+   points="252.2,33.8 414.9,164 -0.1,164 0.4,136 77.5,58.8 138.7,108.4 173.2,73.8 194.8,91.4 "
+   id="polygon13"
+   style="fill:url(#SVGID_1_)" />
+					<path
+   class="st1"
+   d="M 252.2,34 414.5,163.9 H 0 L 0.5,136 77.5,59 138.7,108.6 173.2,74 194.8,91.6 252.2,34 m 0,-0.3 -0.2,0.2 -57.2,57.4 -21.4,-17.5 -0.2,-0.1 -0.2,0.2 -34.3,34.4 -61,-49.5 -0.2,-0.1 -0.2,0.2 -77,77 -0.1,0.1 v 0.1 L -0.3,164 v 0.3 H 0 414.5 415.2 L 414.6,163.9 252.4,33.8 Z"
+   id="path15"
+   inkscape:connector-curvature="0"
+   style="fill:#ffb2ae" />
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

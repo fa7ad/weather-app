@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 415 163"
+   style="enable-background:new 0 0 415 163;"
+   xml:space="preserve"
+   sodipodi:docname="night.svg"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"><metadata
+   id="metadata34"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs32" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1912"
+   inkscape:window-height="1042"
+   id="namedview30"
+   showgrid="false"
+   inkscape:zoom="1.9696758"
+   inkscape:cx="196.12867"
+   inkscape:cy="102.95811"
+   inkscape:window-x="4"
+   inkscape:window-y="34"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="page1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:url(#SVGID_1_);}
+</style>
+<g
+   id="page1">
+	<g
+   id="shape"
+   style="stroke:#672bb3;stroke-width:0.89587262;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5;paint-order:markers stroke fill;stroke-linecap:round"
+   transform="matrix(1.0971252,0,0,1.1379402,-1.3015441,-20.569896)">
+		<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="207.2316"
+   y1="162.94119"
+   x2="207.2316"
+   y2="33">
+			<stop
+   offset="0"
+   style="stop-color:#FFFFFF;stop-opacity:0"
+   id="stop4" />
+			<stop
+   offset="1.898893e-02"
+   style="stop-color:#F3F1F7;stop-opacity:0.867"
+   id="stop6" />
+			
+			<stop
+   offset="0.1977"
+   style="stop-color:#9183B6;stop-opacity:0.91"
+   id="stop10" />
+			
+			
+			<stop
+   offset="0.38"
+   style="stop-color:#584290;stop-opacity:0.859"
+   id="stop16" />
+			
+			<stop
+   offset="0.7727"
+   style="stop-color:#442A73;stop-opacity:0.99823529"
+   id="stop20" />
+			<stop
+   offset="1"
+   style="stop-color:#331459;stop-opacity:1"
+   id="stop22" />
+		</linearGradient>
+		<polygon
+   class="st0"
+   points="0,162.9 414.5,162.9 252.2,33 194.8,90.6 173.2,73 138.7,107.6 77.5,58 0.5,135 "
+   id="polygon25"
+   style="fill:url(#SVGID_1_);stroke:#672bb3;stroke-width:0.89587262;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5;paint-order:markers stroke fill;stroke-linecap:round" />
+	</g>
+</g>
+</svg>
