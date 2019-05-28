@@ -38,7 +38,7 @@ class CurrentWeather extends React.PureComponent<CurrentWeatherProps> {
     this.props.setLocationAndUpdate(this.props.location);
     this.timer = setInterval(
       () => this.props.setLocationAndUpdate(this.props.location),
-      5e3
+      5*6e4 // 5 minutes
     );
   }
 
