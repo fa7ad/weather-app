@@ -31,6 +31,10 @@
   align-items: center;
 }
 
+.forecast-item__temperature {
+  padding-left: 10px;
+}
+
 .forecast-item__icon {
   width: 1.5em;
   text-align: right;
