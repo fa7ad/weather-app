@@ -19,20 +19,20 @@ class Forecasts extends Component<ForecastsProps> {
     return (
       <div className='forecasts__root'>
         <Forecast
-          day={moment(today.date).format('dddd')}
+          day={moment(today.date).utc().format('dddd')}
           icon={today.icon.icon_name}
           temp={today.temp.now}
         />
         {tomorrow && (
           <Forecast
-            day={moment(tomorrow.date).format('dddd')}
+            day={moment(tomorrow.date).utc().format('dddd')}
             icon={tomorrow.icon.icon_name}
             temp={tomorrow.temp.now}
           />
         )}
         {after && (
           <Forecast
-            day={moment(after.date).format('dddd')}
+            day={moment(after.date).utc().format('dddd')}
             icon={after.icon.icon_name}
             temp={after.temp.now}
           />
