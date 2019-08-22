@@ -1386,10 +1386,10 @@
     hoist-non-react-statics "^3.3.0"
     redux "^4.0.0"
 
-"@types/react-select@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-3.0.0.tgz#d8e2fa078099963d2f33bea20b735a962799015a"
-  integrity sha512-eu+4qdByhx1Szqtpqke/7Bwhl5B1cWm47ojlYKp+PR2x9eVnzoytRoi2FNthQxCTQor4t81xgqY/8X4Naf2rKQ==
+"@types/react-select@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-3.0.3.tgz#4c04cc35e1b5951433cbac576741c71127fd9c72"
+  integrity sha512-cno6yYpC5RtVLfxmEPLE0VRJHIj5bsPL6Za0aSX33WeR8zQ3G3KGp9umfQwDm1VzhPC0izUU9eWNov+prbd3pQ==
   dependencies:
     "@types/react" "*"
     "@types/react-dom" "*"
