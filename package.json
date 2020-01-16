@@ -5,7 +5,7 @@
   "homepage": "https://fa7ad.github.io/weather-app/",
   "dependencies": {
     "@types/classnames": "^2.2.9",
-    "@types/node": "13.1.6",
+    "@types/node": "13.1.7",
     "@types/react": "16.9.17",
     "@types/react-dom": "16.9.4",
     "@types/react-redux": "^7.1.5",
