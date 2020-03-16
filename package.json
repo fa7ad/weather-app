@@ -48,7 +48,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-select": "^3.0.10",
+    "@types/react-select": "^3.0.11",
     "gh-pages": "^2.2.0",
     "react-snap": "^1.23.0"
   },
